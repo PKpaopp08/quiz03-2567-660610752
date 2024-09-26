@@ -7,7 +7,7 @@ export interface Room {
   roomName: string;
 }
 
-export interface Message {
+export interface Messages {
   roomId: string;
   messageId: string;
   messageText: string;
@@ -17,6 +17,12 @@ export interface User {
   username: string;
   password: string;
   role: "ADMIN" | "SUPER_ADMIN";
+}
+
+export interface DB {
+  rooms: Room[];
+  messages: Message[];
+  users: User[];
 }
 
 const originalDB = {
